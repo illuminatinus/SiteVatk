@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VATK Создать документ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="create">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">VATK</div>
+      <nav class="menu">
+        <a href="index.html">Дашборд</a>
+        <a href="documents.html">Документы</a>
+        <a href="create.html" class="active">Создать документ</a>
+        <a href="profile.html">Профиль</a>
+        <a href="admin.html">Админ</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="langToggle" class="button secondary">Қазақ/Рус</button>
+        <button id="logoutBtn" class="button danger">Выйти</button>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <div>
+          <h1>Создать документ</h1>
+          <p class="subtitle">Добавь новый документ для работы.</p>
+        </div>
+      </header>
+      <section class="card full-card">
+        <form id="createForm" class="form">
+          <label>Название документа</label>
+          <input type="text" id="docTitle" placeholder="Отчет по практике" required />
+          <label>Описание</label>
+          <textarea id="docDescription" rows="5" placeholder="Краткое описание..." required></textarea>
+          <label>Тип</label>
+          <select id="docType" required>
+            <option value="study">Учебный</option>
+            <option value="admin">Админ</option>
+            <option value="other">Другое</option>
+          </select>
+          <label>Файл</label>
+          <input type="file" id="docFile" />
+          <button type="submit" class="button primary">Сохранить</button>
+          <p class="note" id="createMessage"></p>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

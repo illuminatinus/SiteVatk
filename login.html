@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VATK Вход</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="login">
+  <div class="login-page">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>Вход в систему VATK</h1>
+        <button id="langToggle" class="button secondary">Қазақ/Рус</button>
+      </div>
+      <div class="tabs">
+        <button id="loginTab" class="tab active">Вход</button>
+        <button id="registerTab" class="tab">Регистрация</button>
+      </div>
+      <form id="authForm" class="form">
+        <label>Email</label>
+        <input type="email" id="emailInput" placeholder="email@vatk.kz" required />
+        <label>Пароль</label>
+        <input type="password" id="passwordInput" placeholder="••••••••" required />
+        <div id="nameField" class="hidden">
+          <label>ФИО</label>
+          <input type="text" id="nameInput" placeholder="Иванов Иван" />
+        </div>
+        <div id="roleField" class="hidden">
+          <label>Роль</label>
+          <select id="roleInput">
+            <option value="student">Студент</option>
+            <option value="teacher">Преподаватель</option>
+            <option value="secretary">Секретарь</option>
+          </select>
+        </div>
+        <button type="submit" class="button primary" id="submitBtn">Войти</button>
+        <p class="note" id="messageText"></p>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
